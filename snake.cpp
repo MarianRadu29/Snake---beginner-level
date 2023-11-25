@@ -191,6 +191,6 @@ int main()
         for (i = 0; i <= score; i++)
             T[coadax[i]][coaday[i]] = '0';
     }
-    cin >> i;
+
     return 0;
 }
