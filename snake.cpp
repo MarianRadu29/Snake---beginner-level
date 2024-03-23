@@ -4,6 +4,7 @@
 #include<iomanip>
 #include<conio.h>
 #include<windows.h>
+#include<ctime>
 using namespace std;
 char T[25][60], g;
 int i, j, score = 0, fructx[21], fructy[21], coadax[1200], coaday[1200], a, b;
@@ -23,10 +24,10 @@ void Spatiu_de_joc()
                 T[i][j] = ' ';
     for (i = 1; i <= 60; i++)
         T[20][i] = '#';
-
 }
 void fructele()
-{
+{   
+    srand(time(NULL));
     for (i = 1; i <= 20; i++)
         do
         {
@@ -50,6 +51,7 @@ int main()
     snake.x = 0;
     snake.y = 0;
     bool game = true;
+    srand(time(NULL));
     do
     {
         snake.x = rand() % 19;
@@ -191,6 +193,6 @@ int main()
         for (i = 0; i <= score; i++)
             T[coadax[i]][coaday[i]] = '0';
     }
-
+    cin >> i;
     return 0;
 }
